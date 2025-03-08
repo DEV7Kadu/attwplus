@@ -1,4 +1,4 @@
-# 📝 Log de Versões
+# 📝 Log de Versões - Whaticket Plus
 
 ## 🚀 Versão 5.5.0 - 12/02/2024 (11:38)
 
