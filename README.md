@@ -1,6 +1,6 @@
 # 📝 Log de Versões - Whaticket Plus
 
-## 🚀 Versão 5.5.0 - 12/02/2025 (11:38)
+## 🚀 Versão 5.5.5 - 12/03/2025 (11:38)
 
 ATENÇÃO: Drive contem vipplus.zip com novas correções e github também:
 Arquivos corrigidos: queues.ts (Envio de texto + img nas campanhas); SendWhatsAppMedia.ts (Envio de Audio em respota rapidas); wbotMessageListener.ts (Correção MENU duplicado).
