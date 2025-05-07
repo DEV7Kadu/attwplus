@@ -1,11 +1,29 @@
 # 📝 Log de Versões - Whaticket Plus
 
-## 🚀 Versão 5.5.5 - 12/03/2025 (11:38)
+## 🚀 Versão 24.0.0 - 16/04/2025
 
-ATENÇÃO: Drive contem vipplus.zip com novas correções e github também:
+✅ Correções no Darkmode (em mensagens)
+✅ Botão Light/Dark movido (agora localizado no perfil)
+✅ Estilos dos cards da Dashboard alterados (botão de impressão removido)
+✅ Estilo de tickets ajustado
+✅ Respostas rápidas reformuladas (novo layout)
+✅ Correção no envio de menu (filas) – na terceira tentativa, a mensagem é enviada automaticamente para a primeira fila.
+✅ Botão de tradução adicionado
+✅ Aviso de contato (quando o ticket está aberto, um aviso é emitido)
+✅ Página de conexão redesenhada
+✅ Inclusão da opção de SuperAdmin (no popup de usuário)
+✅ Correção de agendamento (agora permite enviar imagem junto ao texto)
+✅ Agendamento reformulado (suporte para ciclos adicionado)
+✅ Novo layout das telas de login e signup
+✅ Correção de vazamento no WebSocket
+✅ Correção nos Horarios de Atendimento
+
+## 🚀 Versão 23.0.0 - 12/02/2024 (11:38)
+
+ATENÇÃO: Drive contem plusvipclub.zip com novas correções e github também:
 Arquivos corrigidos: queues.ts (Envio de texto + img nas campanhas); SendWhatsAppMedia.ts (Envio de Audio em respota rapidas); wbotMessageListener.ts (Correção MENU duplicado).
 
-*Faça a atualização seguindo passo a passo do plusatualizar.sh
+*Faça a atualização seguindo passo a passo do wplusatualizar.sh
 
 FIX: Envio de midia na fila (QueueOptionController.ts, QueueController.ts, wbotMessageListener.ts)
 FIX: ,Contact (Erro de digitação) "Linha 2108: const body = `\u200e ${whatsapp.outOfHoursMessage}`;" (wbotMessageListener.ts)
@@ -15,7 +33,7 @@ Correção do envio de fila WHATICKET:
 Removemos a verificação baseada em regex que impedia a seleção de filas após uma mensagem inválida. Agora, qualquer entrada numérica válida é aceita, independente da última mensagem enviada pelo bot.
 
 
-## 🚀 Versão 5.5.0 - 13/11/2024 (13:17)
+## 🚀 Versão 22.0.0 - 13/11/2024 (13:17)
 
 ✅ Correção ao Redimensionar Área de Ticket: Erro corrigido ao redimensionar.  
 ✅ Correção de toastError.js: Problema resolvido no `toastError.js`.  
@@ -30,7 +48,7 @@ Removemos a verificação baseada em regex que impedia a seleção de filas apó
 ✅ Correção Chat no modo Dark
 ✅ Inserido pastas por empresas na "public"
 
-## 🚀 Versão 5.3.5 - 07/11/2024
+## 🚀 Versão 21.0.0 - 07/11/2024
 
 ✅ Correção da Data de Vencimento no Topo: A data agora permanece fixa.  
 ✅ Automação em Grupos: Não envia automações para grupos.  
@@ -44,7 +62,7 @@ Removemos a verificação baseada em regex que impedia a seleção de filas apó
 ✅ Visualização de Grupos por Operador: Aba removida do painel de usuários.  
 ✅ Atualização Financeira após Alteração de Plano: Valor ajustado automaticamente na lista do Financeiro.
 
-## 🚀 Versão 5.2.6 - 31/08/2024
+## 🚀 Versão 20.0.0 - 31/08/2024
 
 ✅ Fechar todos os tickets abertos ou em espera.
 ✅ Reagir a uma mensagem.
@@ -56,7 +74,7 @@ Removemos a verificação baseada em regex que impedia a seleção de filas apó
 ✅ Novo layout da página de login.
 ✅ Indicação “Digitando” ou “Gravando” aparece no ticket, no canto inferior direito, ao lado do nome.
 
-## 24/07/2024
+## 🚀 Versão 19.0.0 - 24/07/2024
 
 ✅ Fizemos correção no Vcard
 ✅ Função de habilitar e desabilitar novos registros
