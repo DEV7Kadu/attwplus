@@ -1,6 +1,6 @@
 # 📝 Log de Versões - Whaticket Plus
 
-## 🚀 Versão 24.0.0 - 27/06/2025
+## 🚀 Versão 25.0.0 - 18/07/2025
 
 ✅ Correções no Darkmode (em mensagens)
 ✅ Botão Light/Dark movido (agora localizado no perfil)
