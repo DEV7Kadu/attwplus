@@ -1,44 +1,49 @@
 # 📝 Log de Versões - Whaticket Plus
 
+## 🚀 Versão 28.0.0 - 15/11/2025
+
+🆕 Compatibilidade com Ubuntu 22.04
+🆕 Atualização API OpenAI - (Antes) v3.3.0  (Agora) v4.28.0   
+
 ## 🚀 Versão 27.0.0 - 13/11/2025
 
-# Integrações e APIs
+🆕 Integrações e APIs
 ✅ Integração nativa com Google Gemini.  
 ✅ Adicionados novos gateways de pagamento — MercadoPago e Gerencianet — totalmente configuráveis pelo painel administrativo.  
 ✅ Atualização da API para a versão v7.0.0-rc.6.  
 
-# Automação e Atendimento
+🆕 Automação e Atendimento
 ✅ Implementado envio automático de saudação ao aceitar tickets.  
 ✅ Adicionada notificação automática ao transferir tickets entre filas ou agentes.  
 ✅ Novo sistema de alerta para avisar quando um ticket já está sendo visualizado ou atendido por outro agente.  
 
-# Mensagens e Comunicação
+🆕 Mensagens e Comunicação
 ✅ Função de busca no histórico de mensagens dentro dos tickets.  
 ✅ Correção na funcionalidade de encaminhar mensagens de localização e arquivos/documentos.  
 
-# Correção e Normalização de Sessões (JID/LID)
+🆕 Correção e Normalização de Sessões (JID/LID)
 ✅ Normalização consistente entre o envio e o recebimento de mensagens.  
 ✅ Mapeamento automático de LID para JID, garantindo compatibilidade retroativa.  
 ✅ Tratamento aprimorado de contatos duplicados.  
 ✅ Cache otimizado para melhor desempenho de sessão.  
 
-# Decodificação e Confiabilidade em Grupos
+🆕 Decodificação e Confiabilidade em Grupos
 ✅ Patch inteligente para interceptar objetos inválidos.  
 ✅ Conversão automática de objetos Object() para Buffer.  
 ✅ Correção de falhas “Invalid public key”, garantindo o recebimento e envio correto de mensagens em grupos.  
 ✅ Melhoria geral na estabilidade de grupos.  
 
-# Otimização e Performance
+🆕 Otimização e Performance
 ✅ Implementação de cache dedicado para metadados de grupos (cachedGroupMetadata).  
 ✅ Redução no número de requisições e no tempo de carregamento.  
 ✅ Logs de depuração otimizados, oferecendo mais detalhes com menor impacto no sistema.  
 ✅ Tratamento de erros aprimorado e código refatorado para maior eficiência.  
 
-# Identificação e Contatos
+🆕 Identificação e Contatos
 ✅ Implementação do LID (Local ID) como identificador único e permanente para contatos.  
 O LID elimina a dependência do número de telefone (JID), prevenindo duplicações e garantindo integridade do histórico mesmo após trocas de número.  
 
-# Interface e Experiência do Usuário
+🆕 Interface e Experiência do Usuário
 ✅ Ajuste no menu de anexos (attachmentMenu) no modo escuro.  
 ✅ Revisão e padronização de nomenclaturas na interface.  
 ✅ Novo design para a área de upload de arquivos.  
