@@ -1,6 +1,12 @@
 # 📝 Log de Versões - Whaticket Plus
 
+## 🚀 Versão 28.0.1 - 22/11/2025
+
+🆕 API Atualizada v7.0.0-rc.9
+
 ## 🚀 Versão 28.0.0 - 15/11/2025
+
+🆕 API Atualizada v7.0.0-rc.6
 
 🆕 Compatibilidade com Ubuntu 22.04
 🆕 Atualização API OpenAI - (Antes) v3.3.0  (Agora) v4.28.0   
