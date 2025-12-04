@@ -485,7 +485,7 @@ Este é um software proprietário. O uso, cópia, modificação e/ou distribuiç
 
 <div align="center">
 
-## Feito com ❤️ para otimizar seu atendimento no WhatsApp
+### Feito com ❤️ para otimizar seu atendimento no WhatsApp
 
 **[⬆ Voltar ao topo](#-whaticket-plus)**
 
