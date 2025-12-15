@@ -1,492 +1,162 @@
-<div align="center">
+# 📝 Log de Versões - Whaticket Plus
 
-# 📱 Whaticket Plus
+## 🚀 Versão 29.0.1 - 15/12/2025
 
-### Sistema completo de atendimento e automação para WhatsApp
-
-[![Version](https://img.shields.io/badge/version-28.0.1-blue.svg)](https://github.com/seu-usuario/whaticket-plus)
-[![API](https://img.shields.io/badge/API-v7.0.0--rc.9-green.svg)](https://github.com/seu-usuario/whaticket-plus)
-[![License](https://img.shields.io/badge/license-Proprietary-red.svg)](LICENSE)
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-orange.svg)](https://ubuntu.com/)
-
-[Recursos](#-recursos-principais) • [Instalação](#-instalação) • [Changelog](#-changelog-completo) • [Suporte](#-suporte)
-
----
-
-</div>
-
-## 📋 Índice
-
-- [Recursos Principais](#-recursos-principais)
-- [Versões Recentes](#-versões-recentes)
-- [Changelog Completo](#-changelog-completo)
-- [Instalação](#-instalação)
-- [Tecnologias](#-tecnologias)
-- [Suporte](#-suporte)
-
-## ✨ Recursos Principais
-
-<table>
-<tr>
-<td width="50%">
-
-### 🤖 Automação Inteligente
-- Saudação automática em tickets
-- Transferência inteligente entre filas
-- Sistema de alerta de atendimento
-- Notificações automáticas
-
-</td>
-<td width="50%">
-
-### 🔌 Integrações
-- Google Gemini (IA)
-- OpenAI GPT (v4.28.0)
-- MercadoPago
-- Gerencianet
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 💬 Comunicação Avançada
-- Busca em histórico de mensagens
-- Encaminhamento de mensagens
-- Reações a mensagens
-- Respostas rápidas
-
-</td>
-<td width="50%">
-
-### 👥 Gestão de Grupos
-- Estabilidade aprimorada
-- Cache de metadados
-- Correção "Invalid public key"
-- Decodificação inteligente
-
-</td>
-</tr>
-</table>
-
-## 🚀 Versões Recentes
-
-<details open>
-<summary><b>Versão 28.0.1 - 22/11/2025</b> 🔥</summary>
-
-> **API Atualizada:** `v7.0.0-rc.9`
-
-#### Destaques
-- 🔄 Atualização crítica da API
-- ⚡ Melhorias de performance
-- 🐛 Correções de bugs menores
-
-</details>
-
-<details>
-<summary><b>Versão 28.0.0 - 15/11/2025</b></summary>
-
-> **API Atualizada:** `v7.0.0-rc.6`
-
-#### Melhorias de Compatibilidade
-- ✅ Compatibilidade com Ubuntu 22.04
-- ✅ Atualização OpenAI API: `v3.3.0` → `v4.28.0`
-
-</details>
-
-## 📚 Changelog Completo
-
-### Versão 27.0.0 - 13/11/2025
-
-<details>
-<summary><b>🔌 Integrações e APIs</b></summary>
-
-- [x] Integração nativa com **Google Gemini**
-- [x] Novos gateways de pagamento:
-  - MercadoPago
-  - Gerencianet
-- [x] Configuração via painel administrativo
-- [x] API atualizada para `v7.0.0-rc.6`
-
-</details>
-
-<details>
-<summary><b>🤖 Automação e Atendimento</b></summary>
-
-| Recurso | Descrição | Status |
-|---------|-----------|--------|
-| Saudação Automática | Envio ao aceitar tickets | ✅ |
-| Notificação de Transferência | Entre filas/agentes | ✅ |
-| Alerta de Visualização | Ticket sendo atendido | ✅ |
-
-</details>
-
-<details>
-<summary><b>💬 Mensagens e Comunicação</b></summary>
-
-```diff
-+ Busca no histórico de mensagens dentro dos tickets
-+ Correção no encaminhamento de mensagens de localização
-+ Correção no encaminhamento de arquivos/documentos
-```
-
-</details>
-
-<details>
-<summary><b>🔧 Correção e Normalização de Sessões (JID/LID)</b></summary>
-
-#### Arquitetura de Identificação
-
-```mermaid
-graph LR
-    A[LID Local ID] -->|Mapeia| B[JID Phone Number]
-    B -->|Garante| C[Compatibilidade]
-    A -->|Elimina| D[Duplicações]
-    A -->|Preserva| E[Histórico]
-```
-
-**Melhorias implementadas:**
-- ✅ Normalização consistente entre envio e recebimento
-- ✅ Mapeamento automático de LID para JID
-- ✅ Compatibilidade retroativa garantida
-- ✅ Tratamento aprimorado de contatos duplicados
-- ✅ Cache otimizado para melhor desempenho
-
-</details>
-
-<details>
-<summary><b>👥 Decodificação e Confiabilidade em Grupos</b></summary>
-
-> **Problema resolvido:** Falhas "Invalid public key" em grupos
-
-**Soluções implementadas:**
-1. Patch inteligente para interceptar objetos inválidos
-2. Conversão automática de `Object()` para `Buffer`
-3. Correção de falhas de criptografia
-4. Melhoria geral na estabilidade
-
-**Resultado:** 📈 +95% de estabilidade em grupos
-
-</details>
-
-<details>
-<summary><b>⚡ Otimização e Performance</b></summary>
-
-#### Melhorias de Performance
-
-| Métrica | Antes | Depois | Melhoria |
-|---------|-------|--------|----------|
-| Requisições de Grupo | Alta | Baixa | 🔽 60% |
-| Tempo de Carregamento | Lento | Rápido | ⚡ 45% |
-| Uso de Memória | Alto | Otimizado | 📉 30% |
-
-**Implementações:**
-- Cache dedicado para metadados de grupos (`cachedGroupMetadata`)
-- Logs de depuração otimizados
-- Tratamento de erros aprimorado
-- Código refatorado para maior eficiência
-
-</details>
-
-<details>
-<summary><b>🆔 Identificação e Contatos</b></summary>
-
-#### Sistema LID (Local ID)
-
-> **LID:** Identificador único e permanente para contatos
-
-**Benefícios:**
-- 🔒 Independente do número de telefone
-- 🚫 Previne duplicações
-- 📜 Garante integridade do histórico
-- 🔄 Funciona mesmo após troca de número
-
-</details>
-
-<details>
-<summary><b>🎨 Interface e Experiência do Usuário</b></summary>
-
-**Melhorias visuais:**
-- 🌙 Ajuste no menu de anexos (modo escuro)
-- 📝 Revisão e padronização de nomenclaturas
-- 📤 Novo design para área de upload
-- 🔽 Botão "Rolar para Baixo" em conversas longas
-- 🔍 Busca avançada em mensagens
-
-**Correções:**
-- ✅ Erro "reading includes of null"
-- ✅ Falhas de renderização na lista de tickets
-- ✅ Fluidez geral da interface
-
-</details>
-
----
-
-### Versão 24.0.0 - 18/07/2025
-
-<details>
-<summary><b>Ver detalhes completos</b></summary>
-
-#### 🎨 Interface e Temas
-
-| Componente | Mudança |
-|------------|---------|
-| Modo Escuro | Correções em mensagens |
-| Botão Light/Dark | Movido para o perfil |
-| Dashboard | Estilos alterados, botão impressão removido |
-| Tickets | Estilo ajustado |
-| Login/Signup | Novo layout |
-
-#### 🚀 Funcionalidades
-
-- [x] Respostas rápidas reformuladas (novo layout)
-- [x] Botão de tradução adicionado
-- [x] Aviso de contato quando ticket está aberto
-- [x] Opção de SuperAdmin no popup de usuário
-- [x] Agendamento reformulado com suporte para ciclos
-- [x] Correção: permite enviar imagem com texto no agendamento
-
-#### 🔧 Correções Técnicas
-
-```javascript
-// Correção no envio de menu (filas)
-// Na terceira tentativa, mensagem enviada automaticamente para primeira fila
-if (attempts >= 3) {
-  sendToFirstQueue(message);
-}
-```
-
-- ✅ Correção de vazamento no WebSocket
-- ✅ Correção nos horários de atendimento
-
-</details>
-
----
-
-### Versão 23.0.0 - 12/02/2024
-
-> ⚠️ **ATENÇÃO:** Drive contém `plusvipclub.zip` com novas correções
-
-<details>
-<summary><b>📦 Arquivos Corrigidos</b></summary>
-
-| Arquivo | Correção |
-|---------|----------|
-| `queues.ts` | Envio de texto + imagem nas campanhas |
-| `SendWhatsAppMedia.ts` | Envio de áudio em respostas rápidas |
-| `wbotMessageListener.ts` | Correção de MENU duplicado |
-
-</details>
-
-<details>
-<summary><b>🔧 Correções Implementadas</b></summary>
-
-**Envio de mídia na fila:**
-- `QueueOptionController.ts`
-- `QueueController.ts`
-- `wbotMessageListener.ts`
-
-**Outras correções:**
-- Erro de digitação no Contact (Linha 2108)
-- Remoção da verificação baseada em regex
-- ✅ Qualquer entrada numérica válida agora é aceita
-
-</details>
-
----
-
-### Versão 22.0.0 - 13/11/2024
-
-<details>
-<summary><b>🔧 Correções e Melhorias</b></summary>
-
-#### Correções Principais
-- ✅ Redimensionamento da área de ticket
-- ✅ toastError.js corrigido
-- ✅ Validação do número no ContactModal
-- ✅ OpenAI atualizado para `v3.3.0`
-- ✅ Avaliações de 1 a 5 estrelas
-- ✅ Mensagem de avaliação (apenas em atendimento)
-
-#### Implementações
-- 🕐 Horários intercalados
-- 🎨 Logo alternativo (Light/Dark)
-- 📊 Kanban inserido e reformulado
-- 🎵 Fix áudio no iPhone
-- 🌙 Chat no modo Dark corrigido
-- 📁 Pastas por empresas na "public"
-
-</details>
-
----
-
-### Versão 21.0.0 - 07/11/2024
-
-<details>
-<summary><b>🔧 Correções</b></summary>
-
-- [x] Data de vencimento no topo permanece fixa
-- [x] Automação não envia para grupos
-- [x] Botão `disableBot` para desabilitar bots/automações
-- [x] Correção de mensagem citada
-- [x] Permissão para conexões com mesmo nome
-- [x] Correção no envio de áudio OGG
-
-</details>
-
-<details>
-<summary><b>🚀 Funcionalidades</b></summary>
-
-**Gestão de Empresas:**
-- 🔐 Expiração de conexões após vencimento
-- 💰 Atualização financeira automática após alteração de plano
-
-**Gestão de Contatos:**
-- 🗑️ Seleção para deletar contatos em massa
-- 📊 Remoção de abas desnecessárias no painel de usuários
-
-</details>
-
----
-
-### Versão 20.0.0 - 31/08/2024
-
-<details>
-<summary><b>🆕 Novidades</b></summary>
-
-#### Recursos de Mensagens
-- 🔄 Fechar todos os tickets (abertos ou em espera)
-- 😊 Reagir a mensagens
-- ↗️ Encaminhar mensagens para outro ticket
-- 🗑️ Notificação de mensagem apagada
-
-#### Interface
-- 🎨 Menu aprimorado
-- 🚪 Botão "Sair" no menu
-- 🖥️ Novo layout de login
-- ⌨️ Indicação "Digitando" ou "Gravando" no ticket
-
-</details>
-
----
-
-### Versão 19.0.0 - 24/07/2024
-
-<details>
-<summary><b>🔧 Correções e Melhorias</b></summary>
-
-#### Funcionalidades de Usuário
-- ✅ Correção no Vcard
-- ✅ Habilitar/desabilitar novos registros
-- ⏱️ Tempo de Trial no painel
-- 💬 Respostas rápidas para todos os usuários
-- 📞 Status do número e última interação
-- 📱 Visualização do número conectado
-- 🔄 Botão para reiniciar conexões
-- 🎨 Alterar logo pelo painel
-
-#### Administração
-- 🏢 Nova aba: Cadastrar Empresa
-- 💳 Opção de Plano Interno
-
-</details>
-
----
-
-## 🛠️ Instalação
-
-### Pré-requisitos
-
-```bash
-- Ubuntu 22.04 LTS
-- Node.js 18+
-- PostgreSQL 14+
-- Redis 6+
-```
-
-### Instalação Rápida
-
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/whaticket-plus.git
-
-# Entre no diretório
-cd whaticket-plus
-
-# Execute o script de instalação
-./install.sh
-```
-
-### Atualização
-
-```bash
-# Execute o script de atualização
-./wplusatualizar.sh
-```
-
-> ⚠️ **Importante:** Sempre faça backup antes de atualizar!
-
-## 🔧 Tecnologias
-
-<div align="center">
-
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-
-</div>
-
-### Stack Completo
-
-- **Backend:** Node.js + TypeScript + Express
-- **Frontend:** React + Material-UI
-- **Banco de Dados:** PostgreSQL + Sequelize ORM
-- **Cache:** Redis
-- **WebSocket:** Socket.io
-- **IA:** OpenAI GPT-4 + Google Gemini
-
-## 📞 Suporte
-
-<div align="center">
-
-### Precisa de ajuda?
-
-[![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/seu-servidor)
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/seu-grupo)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:suporte@whaticketplus.com)
-
-</div>
-
-### 📖 Documentação
-
-- 📘 [Wiki Completa](https://github.com/seu-usuario/whaticket-plus/wiki)
-- 🎓 [Tutoriais](https://github.com/seu-usuario/whaticket-plus/wiki/tutorials)
-- ❓ [FAQ](https://github.com/seu-usuario/whaticket-plus/wiki/faq)
-
-## 📊 Estatísticas
-
-<div align="center">
-
-![GitHub stars](https://img.shields.io/github/stars/seu-usuario/whaticket-plus?style=social)
-![GitHub forks](https://img.shields.io/github/forks/seu-usuario/whaticket-plus?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/seu-usuario/whaticket-plus?style=social)
+🆕 API Atualizada v7.0.0-rc.9 
+🆕 Atualização API OpenAI - (Antes) v4.28.0 (Agora) v6.12.0 (compativel com GPT 5.2)
+🆕 Compatibilidade com Ubuntu 24.04 
+🆕 Atualização para Node v20 - (Antes) v18 (Agora) v20
+
+
+## 🚀 Versão 28.0.0 - 15/11/2025
+
+🆕 API Atualizada v7.0.0-rc.6
+
+🆕 Compatibilidade com Ubuntu 22.04
+🆕 Atualização API OpenAI - (Antes) v3.3.0 (Agora) v4.28.0   
+
+## 🚀 Versão 27.0.0 - 13/11/2025
+
+🆕 Integrações e APIs
+✅ Integração nativa com Google Gemini.  
+✅ Adicionados novos gateways de pagamento — MercadoPago e Gerencianet — totalmente configuráveis pelo painel administrativo.  
+✅ Atualização da API para a versão v7.0.0-rc.6.  
+
+🆕 Automação e Atendimento
+✅ Implementado envio automático de saudação ao aceitar tickets.  
+✅ Adicionada notificação automática ao transferir tickets entre filas ou agentes.  
+✅ Novo sistema de alerta para avisar quando um ticket já está sendo visualizado ou atendido por outro agente.  
+
+🆕 Mensagens e Comunicação
+✅ Função de busca no histórico de mensagens dentro dos tickets.  
+✅ Correção na funcionalidade de encaminhar mensagens de localização e arquivos/documentos.  
+
+🆕 Correção e Normalização de Sessões (JID/LID)
+✅ Normalização consistente entre o envio e o recebimento de mensagens.  
+✅ Mapeamento automático de LID para JID, garantindo compatibilidade retroativa.  
+✅ Tratamento aprimorado de contatos duplicados.  
+✅ Cache otimizado para melhor desempenho de sessão.  
+
+🆕 Decodificação e Confiabilidade em Grupos
+✅ Patch inteligente para interceptar objetos inválidos.  
+✅ Conversão automática de objetos Object() para Buffer.  
+✅ Correção de falhas “Invalid public key”, garantindo o recebimento e envio correto de mensagens em grupos.  
+✅ Melhoria geral na estabilidade de grupos.  
+
+🆕 Otimização e Performance
+✅ Implementação de cache dedicado para metadados de grupos (cachedGroupMetadata).  
+✅ Redução no número de requisições e no tempo de carregamento.  
+✅ Logs de depuração otimizados, oferecendo mais detalhes com menor impacto no sistema.  
+✅ Tratamento de erros aprimorado e código refatorado para maior eficiência.  
+
+🆕 Identificação e Contatos
+✅ Implementação do LID (Local ID) como identificador único e permanente para contatos.  
+O LID elimina a dependência do número de telefone (JID), prevenindo duplicações e garantindo integridade do histórico mesmo após trocas de número.  
+
+🆕 Interface e Experiência do Usuário
+✅ Ajuste no menu de anexos (attachmentMenu) no modo escuro.  
+✅ Revisão e padronização de nomenclaturas na interface.  
+✅ Novo design para a área de upload de arquivos.  
+✅ Correção do erro “reading includes of null”, prevenindo falhas de renderização na lista de tickets.  
+✅ Inclusão de botão “Rolar para Baixo” (Scroll Down) para navegação mais fluida em conversas longas.  
+✅ Melhoria geral na fluidez da interface com otimizações visuais e de navegação.  
+✅ Adicionada funcionalidade de busca avançada em mensagens.  
+
+## 🚀 Versão 24.0.0 - 18/07/2025
+
+✅ Correções no Darkmode (em mensagens)
+✅ Botão Light/Dark movido (agora localizado no perfil)
+✅ Estilos dos cards da Dashboard alterados (botão de impressão removido)
+✅ Estilo de tickets ajustado
+✅ Respostas rápidas reformuladas (novo layout)
+✅ Correção no envio de menu (filas) – na terceira tentativa, a mensagem é enviada automaticamente para a primeira fila.
+✅ Botão de tradução adicionado
+✅ Aviso de contato (quando o ticket está aberto, um aviso é emitido)
+✅ Página de conexão redesenhada
+✅ Inclusão da opção de SuperAdmin (no popup de usuário)
+✅ Correção de agendamento (agora permite enviar imagem junto ao texto)
+✅ Agendamento reformulado (suporte para ciclos adicionado)
+✅ Novo layout das telas de login e signup
+✅ Correção de vazamento no WebSocket
+✅ Correção nos Horarios de Atendimento
+
+## 🚀 Versão 23.0.0 - 12/02/2024 (11:38)
+
+ATENÇÃO: Drive contem plusvipclub.zip com novas correções e github também:
+Arquivos corrigidos: queues.ts (Envio de texto + img nas campanhas); SendWhatsAppMedia.ts (Envio de Audio em respota rapidas); wbotMessageListener.ts (Correção MENU duplicado).
+
+*Faça a atualização seguindo passo a passo do wplusatualizar.sh
+
+FIX: Envio de midia na fila (QueueOptionController.ts, QueueController.ts, wbotMessageListener.ts)
+FIX: ,Contact (Erro de digitação) "Linha 2108: const body = `\u200e ${whatsapp.outOfHoursMessage}`;" (wbotMessageListener.ts)
+
+Correção do envio de fila WHATICKET:
+
+Removemos a verificação baseada em regex que impedia a seleção de filas após uma mensagem inválida. Agora, qualquer entrada numérica válida é aceita, independente da última mensagem enviada pelo bot.
+
+
+## 🚀 Versão 22.0.0 - 13/11/2024 (13:17)
+
+✅ Correção ao Redimensionar Área de Ticket: Erro corrigido ao redimensionar.  
+✅ Correção de toastError.js: Problema resolvido no `toastError.js`.  
+✅ Validação do Número no ContactModal: Validação aprimorada.  
+✅ Atualização OpenAI: Atualização para versão "openai": "3.3.0" e wbotMessageListener.ts.  
+✅ Correção nas Avaliações de 1 para 5: Ajuste nas avaliações de 1 a 5 estrelas.  
+✅ Mensagem de Avaliação Somente Quando o Ticket Estiver em Atendimento: Avaliações só aparecem quando o ticket está ativo.  
+✅ Horários Intercalados: Implementação de horários intercalados.  
+✅ Alteração de LOGO de Acordo com LIGHT e DARK: Logo ajustado conforme o tema.  
+✅ Inserido no Kanban e Reformulado
+✅ Fix Audio no iPhone (Não estava reproduzindo)
+✅ Correção Chat no modo Dark
+✅ Inserido pastas por empresas na "public"
+
+## 🚀 Versão 21.0.0 - 07/11/2024
+
+✅ Correção da Data de Vencimento no Topo: A data agora permanece fixa.  
+✅ Automação em Grupos: Não envia automações para grupos.  
+✅ Botão `disableBot`: Desabilita bots ou automações.  
+✅ Correção de Mensagem Citada: Erro corrigido nas mensagens citadas.  
+✅ Permissão para Conexões com Mesmo Nome: Permite conexões com o mesmo nome.  
+✅ Expiração de Conexões: Desconexão automática após vencimento da empresa.  
+✅ Seleção para Deletar Contatos: Opção de seleção para exclusão na página "Contatos".  
+✅ Correção no Envio de Áudio OGG em Respostas Rápidas: Envio de áudios corrigido.  
+✅ Visualização de Tickets Fechados por Operador: Aba removida do painel de usuários.  
+✅ Visualização de Grupos por Operador: Aba removida do painel de usuários.  
+✅ Atualização Financeira após Alteração de Plano: Valor ajustado automaticamente na lista do Financeiro.
+
+## 🚀 Versão 20.0.0 - 31/08/2024
+
+✅ Fechar todos os tickets abertos ou em espera.
+✅ Reagir a uma mensagem.
+✅ Encaminhar mensagens para outro ticket.
+✅ Aparência do menu aprimorada.
+✅ Botão “Sair” adicionado ao menu.
+✅ Notificação quando uma mensagem é apagada no WhatsApp, informando no chat.
+✅ API atualizada.
+✅ Novo layout da página de login.
+✅ Indicação “Digitando” ou “Gravando” aparece no ticket, no canto inferior direito, ao lado do nome.
+
+## 🚀 Versão 19.0.0 - 24/07/2024
+
+✅ Fizemos correção no Vcard
+✅ Função de habilitar e desabilitar novos registros
+✅ Tempo de Trial disponível no Painel
+✅Respostas rápidas visualizadas por todos os usuários
+✅ Contatos agora aparece se é um número ok e o horário da última interação
+✅ Agora é possível ver o número que está conectado no Whaticket
+✅ Botão para reiniciar conexões adicionado
+✅ Alterar logo pelo Painel
+✅ Adicionado nova ABA Cadastrar Empresa
+✅ Add Opção Plano Interno
 
 </div>
 
 ## 📄 Licença
 
-Copyright © 2024 Whaticket Plus. Todos os direitos reservados.
+Copyright © 2023-2025 Whaticket Plus. Todos os direitos reservados.
 
 Este é um software proprietário. O uso, cópia, modificação e/ou distribuição não autorizada é estritamente proibida.
-
----
 
 <div align="center">
 
 ## Feito com ❤️ para otimizar seu atendimento no WhatsApp
-
-**[⬆ Voltar ao topo](#-whaticket-plus)**
-
-</div>
