@@ -1,11 +1,17 @@
 # 📝 Log de Versões - Whaticket Plus
 
-## 🚀 Versão 29.0.1 - 15/12/2025
+## 🚀 Versão 29.0.1 - 18/12/2025
 
 🆕 API Atualizada v7.0.0-rc.9 
 🆕 Atualização API OpenAI - (Antes) v4.28.0 (Agora) v6.12.0 (compativel com GPT 5.2)
 🆕 Compatibilidade com Ubuntu 24.04 
 🆕 Atualização para Node v20 - (Antes) v18 (Agora) v20
+
+🆕 Novo Sistema de Gestão de Visibilidade de Tickets
+✅ 4 Níveis de Acesso: Implementação de controle granular para atendentes (Apenas Meus, Minha Fila, Meus Setores ou Todos).
+✅ Foco e Produtividade: Interface administrativa permite definir exatamente o que cada colaborador pode visualizar, reduzindo distrações.
+✅ Migração Automática: Compatibilidade total com o sistema antigo (allTicket), convertendo permissões automaticamente.
+✅ Performance: Filtragem otimizada direto no banco de dados para carregamento mais rápido da lista de tickets.
 
 
 ## 🚀 Versão 28.0.0 - 15/11/2025
