@@ -2,26 +2,35 @@
 
 ## 🚀 Versão 30.0.0 - 22/12/2025
 
-🆕 Recursos Novos
+🆕 **Recursos Novos**
+✅ **Documentação Completa da API:** Implementação de guia técnico abrangente em `/docs/full-api`, cobrindo mais de 15 módulos do sistema (Mensagens, Tickets, Empresas, Webhooks, etc.).
+✅ **Exemplos em 15 Linguagens:** Cada endpoint principal conta com exemplos práticos em Python, JS, PHP, C#, Go, Ruby, Java, TS, Rust, Swift, Kotlin, Dart, Lua, Bash e PowerShell.
 ✅ **Importação de Grupos do WhatsApp:** Funcionalidade para importar grupos como contatos diretamente na página de Contatos, com criação automática e flag `isGroup`.
-✅ **Transcrição de Áudio Dual:** Suporte a OpenAI Whisper e Azure Speech Services. Painel de configuração completo para seleção de provedor, chaves API e transcrição direta na mensagem com opção de cópia.
-✅ **Exportação de Conversas:** Exportação de tickets para HTML (layout estilo WhatsApp) ou TXT. O arquivo HTML permite visualização no navegador e impressão perfeita em PDF.
+✅ **Transcrição de Áudio Dual:** Suporte a OpenAI Whisper e Azure Speech Services. Painel de configuração para seleção de provedor e transcrição direta na conversa.
+✅ **Exportação de Conversas:** Exportação de tickets para HTML (layout estilo WhatsApp) ou TXT, permitindo impressão perfeita em PDF.
 
-🆕 Melhorias Técnicas
-✅ **Campos Adicionais em Contatos:** Adição de `taxId` (CPF/CNPJ), E-mail associado, `lidNumber` (LID Local Identifier) e suporte ao modo de endereçamento.
-✅ **Sistema de Participantes de Grupos:** Nova tabela `GroupParticipants` com suporte multi-company, gerenciamento de Admin e SuperAdmin e relacionamentos aprimorados.
-✅ **Otimização de Performance:** Implementação de índices `CONCURRENTLY` na tabela de mensagens e novo sistema de cache de tickets (localStorage + in-memory) com estratégia *cache-first*.
-✅ **Modal de Encaminhamento:** `ForwardModal` totalmente reformulado e melhorado com recursos avançados.
+---
 
-🆕 Correções de Bugs
-✅ **Mensagens Duplicadas:** Removido emit duplicado no `ChatController` para evitar repetições.
-✅ **Gestão de Sockets:** Adicionado `socket.off()` antes de `socket.on()` no Chat para garantir limpeza de conexões.
-✅ **Ajustes Visuais:** Correção da propriedade *shrink* no CSS do `QueueSelect` e atualização do ícone de Grupos para compatibilidade com Material-UI v4.
-✅ **Criação de Contatos:** `CreateContactService` atualizado com suporte a foto de perfil (`profilePicUrl`) e flag de grupo.
+🆕 **Melhorias Técnicas**
+✅ **Rotas de Documentação HTML:** Criação de `apiDocsRoutes.ts` com rotas acessíveis para documentação completa e detalhada de mensagens.
+✅ **Campos Adicionais em Contatos:** Adição de `taxId` (CPF/CNPJ), E-mail associado e suporte ao identificador único `LID`.
+✅ **Sistema de Participantes de Grupos:** Nova tabela `GroupParticipants` com suporte multi-company e gerenciamento de níveis de admin.
+✅ **Otimização de Performance:** Índices `CONCURRENTLY` e sistema de cache de tickets (localStorage + in-memory) com estratégia *cache-first*.
+✅ **Padronização de API:** Inclusão de formatos de autenticação, limites de taxa por plano, estrutura de erros e payloads de webhook.
 
-🆕 Migrações de Banco de Dados
-✅ Implementação de 5 novas migrations com try-catch e verificações de segurança (`information_schema`).
-✅ Inclusão de índices de performance e novos campos estruturais (TaxId, Email, LID).
+---
+
+🆕 **Correções de Bugs**
+✅ **Mensagens Duplicadas:** Removido emit duplicado no `ChatController`.
+✅ **Gestão de Sockets:** Implementado `socket.off()` antes de `socket.on()` para limpeza de conexões.
+✅ **Ajustes Visuais:** Correção de CSS no `QueueSelect` e atualização de ícones para compatibilidade Material-UI v4.
+✅ **Criação de Contatos:** Suporte a foto de perfil (`profilePicUrl`) e flag de grupo no `CreateContactService`.
+
+---
+
+🆕 **Migrações de Banco de Dados**
+✅ **5 Novas Migrations:** Implementadas com try-catch e verificações de segurança via `information_schema`.
+✅ **Estrutura:** Índices de performance, campos de identificação (LID/TaxId) e nova tabela de participantes de grupos.
 
 ## 🚀 Versão 29.0.1 - 18/12/2025
 
