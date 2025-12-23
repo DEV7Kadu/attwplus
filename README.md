@@ -1,5 +1,28 @@
 # 📝 Log de Versões - Whaticket Plus
 
+## 🚀 Versão 30.0.0 - 22/12/2025
+
+🆕 Recursos Novos
+✅ **Importação de Grupos do WhatsApp:** Funcionalidade para importar grupos como contatos diretamente na página de Contatos, com criação automática e flag `isGroup`.
+✅ **Transcrição de Áudio Dual:** Suporte a OpenAI Whisper e Azure Speech Services. Painel de configuração completo para seleção de provedor, chaves API e transcrição direta na mensagem com opção de cópia.
+✅ **Exportação de Conversas:** Exportação de tickets para HTML (layout estilo WhatsApp) ou TXT. O arquivo HTML permite visualização no navegador e impressão perfeita em PDF.
+
+🆕 Melhorias Técnicas
+✅ **Campos Adicionais em Contatos:** Adição de `taxId` (CPF/CNPJ), E-mail associado, `lidNumber` (LID Local Identifier) e suporte ao modo de endereçamento.
+✅ **Sistema de Participantes de Grupos:** Nova tabela `GroupParticipants` com suporte multi-company, gerenciamento de Admin e SuperAdmin e relacionamentos aprimorados.
+✅ **Otimização de Performance:** Implementação de índices `CONCURRENTLY` na tabela de mensagens e novo sistema de cache de tickets (localStorage + in-memory) com estratégia *cache-first*.
+✅ **Modal de Encaminhamento:** `ForwardModal` totalmente reformulado e melhorado com recursos avançados.
+
+🆕 Correções de Bugs
+✅ **Mensagens Duplicadas:** Removido emit duplicado no `ChatController` para evitar repetições.
+✅ **Gestão de Sockets:** Adicionado `socket.off()` antes de `socket.on()` no Chat para garantir limpeza de conexões.
+✅ **Ajustes Visuais:** Correção da propriedade *shrink* no CSS do `QueueSelect` e atualização do ícone de Grupos para compatibilidade com Material-UI v4.
+✅ **Criação de Contatos:** `CreateContactService` atualizado com suporte a foto de perfil (`profilePicUrl`) e flag de grupo.
+
+🆕 Migrações de Banco de Dados
+✅ Implementação de 5 novas migrations com try-catch e verificações de segurança (`information_schema`).
+✅ Inclusão de índices de performance e novos campos estruturais (TaxId, Email, LID).
+
 ## 🚀 Versão 29.0.1 - 18/12/2025
 
 🆕 API Atualizada v7.0.0-rc.9 
